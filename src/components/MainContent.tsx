@@ -39,32 +39,32 @@ const MainContent = ({
           <div className="text-center mb-12 animate-fade-in">
             <Badge className="mb-4 bg-secondary text-secondary-foreground">Наши услуги</Badge>
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Виды перевозок
+              Маршруты и направления
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Предлагаем широкий спектр услуг для любых целей
+              По Москве, МО и междугородние маршруты по всей России
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                icon: 'Briefcase',
-                title: 'Деловые поездки',
-                desc: 'Трансфер для бизнес-встреч и корпоративных мероприятий',
-                features: ['Wi-Fi в салоне', 'Зарядка устройств', 'Вода и пресса'],
+                icon: 'MapPin',
+                title: 'По Москве и МО',
+                desc: 'Трансферы в аэропорты, экскурсии по Подмосковью',
+                features: ['Шереметьево, Домодедово', 'Внуково, Жуковский', 'Корпоративы, экскурсии'],
               },
               {
-                icon: 'Plane',
-                title: 'Трансферы в аэропорт',
-                desc: 'Комфортная доставка до аэропорта и встреча с табличкой',
-                features: ['Отслеживание рейсов', 'Помощь с багажом', 'Детские кресла'],
+                icon: 'Navigation',
+                title: 'Междугородние',
+                desc: 'Поездки по России на любое расстояние',
+                features: ['СПб, Казань, Сочи', 'Екатеринбург, Новосибирск', 'Рязань, Уфа, Саранск'],
               },
               {
-                icon: 'PartyPopper',
-                title: 'Торжественные события',
-                desc: 'Свадьбы, юбилеи и другие праздничные мероприятия',
-                features: ['Украшение авто', 'Фото на память', 'Шампанское'],
+                icon: 'Users',
+                title: 'Групповые поездки',
+                desc: 'Свадьбы, школьные выезды, туры по России',
+                features: ['Детские кресла', 'Скидки до 10%', 'Особые условия для Госкомпаний'],
               },
             ].map((service, idx) => (
               <Card 
@@ -104,7 +104,7 @@ const MainContent = ({
               Рассчитайте стоимость
             </h2>
             <p className="text-xl text-muted-foreground">
-              Минимальная подача — 2 часа. Используйте наши скидки!
+              Аренда от 4 часов. Скидки для групп до 10%!
             </p>
           </div>
 
@@ -189,18 +189,18 @@ const MainContent = ({
           <div className="text-center mb-12 animate-fade-in">
             <Badge className="mb-4 bg-primary text-primary-foreground">Наш парк</Badge>
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Автомобили
+              Новые автобусы 2024 года
             </h2>
             <p className="text-xl text-muted-foreground">
-              Современные и комфортабельные автомобили на любой вкус
+              VIP-класс с кондиционером, USB-зарядками и мультимедиа
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { name: 'Мерседес Спринтер', type: 'Микроавтобус', seats: '20 мест', price: '2500 ₽/час' },
-              { name: 'Автобус Tourist', type: 'Стандарт', seats: '47 мест', price: '3500 ₽/час' },
-              { name: 'Автобус Premium', type: 'Комфорт', seats: '53 места', price: '3500 ₽/час' },
+              { name: 'Мерседес Спринтер 2024', type: 'Микроавтобус', seats: '20 мест', price: '2500 ₽/час' },
+              { name: 'Автобус VIP 2024', type: '49-53 места', seats: 'Премиум-комфорт', price: '3500 ₽/час' },
+              { name: 'Автобус Lux 2024', type: '49-55 мест', seats: 'Элитный класс', price: '3500 ₽/час' },
             ].map((car, idx) => (
               <Card 
                 key={idx} 

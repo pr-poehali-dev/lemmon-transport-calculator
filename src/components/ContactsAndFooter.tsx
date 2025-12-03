@@ -14,10 +14,10 @@ const ContactsAndFooter = () => {
           <div className="text-center mb-12 animate-fade-in">
             <Badge className="mb-4 bg-accent text-accent-foreground">Контакты</Badge>
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Свяжитесь с нами
+              Забронируйте заранее!
             </h2>
             <p className="text-xl text-muted-foreground">
-              Ответим на все вопросы и поможем с бронированием
+              В сезон спрос высокий. Работаем с ИП, ООО и физлицами. Лицензированная компания
             </p>
           </div>
 
@@ -113,22 +113,22 @@ const ContactsAndFooter = () => {
                 <span className="text-2xl font-heading font-bold">Леммон</span>
               </div>
               <p className="text-white/70 leading-relaxed">
-                Профессиональные пассажирские перевозки с 2015 года
+                Элитные пассажирские перевозки с 2008 года. Более 17 лет опыта на рынке.
               </p>
             </div>
             
             {[
               {
+                title: 'Маршруты',
+                links: ['Москва и МО', 'Санкт-Петербург', 'Казань, Сочи', 'По России'],
+              },
+              {
                 title: 'Услуги',
-                links: ['Деловые поездки', 'Трансферы', 'Торжества', 'Почасовая аренда'],
+                links: ['Корпоративы', 'Экскурсии', 'Свадьбы', 'Школьные выезды'],
               },
               {
                 title: 'Компания',
-                links: ['О нас', 'Парк', 'Вакансии', 'Партнерам'],
-              },
-              {
-                title: 'Поддержка',
-                links: ['Контакты', 'FAQ', 'Оплата', 'Гарантии'],
+                links: ['О нас', 'Госконтракты', 'Скидки до 10%', 'Лицензия'],
               },
             ].map((column, idx) => (
               <div key={idx}>

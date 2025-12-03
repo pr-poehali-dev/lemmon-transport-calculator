@@ -13,17 +13,16 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
             <Badge className="bg-accent text-accent-foreground">
-              Профессиональные перевозки
+              Элитные пассажирские перевозки с 2008 года
             </Badge>
             <h1 className="text-5xl md:text-7xl font-heading font-bold leading-tight">
-              Ваше путешествие с{' '}
+              Новые автобусы{' '}
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                комфортом
+                2024 года
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Современный парк транспорта, опытные водители и выгодные корпоративные тарифы. 
-              Минимальная подача — 2 часа.
+              Премиум-комфорт на маршрутах по России. Автобусы VIP-класса (49-55 мест) с кондиционером, USB-зарядками и аудио/видео системами. Аренда от 4 часов.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button 
@@ -46,9 +45,9 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
               <div className="space-y-6">
                 {[
-                  { icon: 'Clock', title: 'Пунктуальность', desc: 'Прибытие точно в срок' },
-                  { icon: 'Shield', title: 'Безопасность', desc: 'Застрахованный транспорт' },
-                  { icon: 'Star', title: 'Комфорт', desc: 'Премиум автомобили' },
+                  { icon: 'Award', title: '17 лет опыта', desc: 'Тысячи довольных клиентов' },
+                  { icon: 'Shield', title: 'Полная страховка', desc: 'Водители — граждане РФ' },
+                  { icon: 'Sparkles', title: 'Новый парк 2024', desc: 'VIP-класс с кондиционером' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 hover:translate-x-2 transition-transform">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
