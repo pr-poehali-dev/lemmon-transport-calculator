@@ -13,8 +13,9 @@ interface MainContentProps {
   setClientType: (type: string) => void;
   season: string;
   setSeason: (season: string) => void;
+  vehicleType: string;
+  setVehicleType: (type: string) => void;
   calculatedPrice: number;
-  baseRate: number;
   scrollToSection: (sectionId: string) => void;
 }
 
@@ -25,10 +26,12 @@ const MainContent = ({
   setClientType,
   season,
   setSeason,
+  vehicleType,
+  setVehicleType,
   calculatedPrice,
-  baseRate,
   scrollToSection,
 }: MainContentProps) => {
+  const baseRate = vehicleType === 'bus' ? 3500 : 2500;
   return (
     <>
       <section id="services" className="py-20 px-4 bg-gradient-to-br from-muted/30 to-transparent">
@@ -109,6 +112,19 @@ const MainContent = ({
             <CardContent className="p-8 space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
+                  <Label className="text-lg font-semibold">Тип транспорта</Label>
+                  <Select value={vehicleType} onValueChange={setVehicleType}>
+                    <SelectTrigger className="text-lg h-12 border-2">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="sprinter">Мерседес Спринтер (20 мест) — 2500 ₽/час</SelectItem>
+                      <SelectItem value="bus">Автобус (47-53 места) — 3500 ₽/час</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2">
                   <Label className="text-lg font-semibold">Количество часов</Label>
                   <Input
                     type="number"
@@ -147,13 +163,6 @@ const MainContent = ({
                     </SelectContent>
                   </Select>
                 </div>
-
-                <div className="space-y-2">
-                  <Label className="text-lg font-semibold">Базовая ставка</Label>
-                  <div className="h-12 border-2 border-muted rounded-lg flex items-center px-4 bg-muted/30">
-                    <span className="text-lg font-semibold">{baseRate} ₽/час</span>
-                  </div>
-                </div>
               </div>
 
               <div className="bg-gradient-to-br from-primary via-secondary to-accent p-8 rounded-2xl text-center">
@@ -189,9 +198,9 @@ const MainContent = ({
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { name: 'Mercedes-Benz E-Class', type: 'Бизнес-класс', seats: '3 пассажира', price: '2000 ₽/час' },
-              { name: 'Mercedes-Benz V-Class', type: 'Минивэн', seats: '6 пассажиров', price: '2500 ₽/час' },
-              { name: 'Mercedes-Benz S-Class', type: 'Премиум', seats: '3 пассажира', price: '3000 ₽/час' },
+              { name: 'Мерседес Спринтер', type: 'Микроавтобус', seats: '20 мест', price: '2500 ₽/час' },
+              { name: 'Автобус Tourist', type: 'Стандарт', seats: '47 мест', price: '3500 ₽/час' },
+              { name: 'Автобус Premium', type: 'Комфорт', seats: '53 места', price: '3500 ₽/час' },
             ].map((car, idx) => (
               <Card 
                 key={idx} 

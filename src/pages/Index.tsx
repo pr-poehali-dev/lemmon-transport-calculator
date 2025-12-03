@@ -9,12 +9,12 @@ const Index = () => {
   const [hours, setHours] = useState(2);
   const [clientType, setClientType] = useState('standard');
   const [season, setSeason] = useState('regular');
+  const [vehicleType, setVehicleType] = useState('sprinter');
   const [calculatedPrice, setCalculatedPrice] = useState(0);
-
-  const baseRate = 1500;
   
   const calculatePrice = () => {
     const actualHours = Math.max(2, hours);
+    const baseRate = vehicleType === 'bus' ? 3500 : 2500;
     let price = actualHours * baseRate;
     
     if (clientType === 'corporate') price *= 0.85;
@@ -28,7 +28,7 @@ const Index = () => {
 
   useEffect(() => {
     calculatePrice();
-  }, [hours, clientType, season]);
+  }, [hours, clientType, season, vehicleType]);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -47,8 +47,9 @@ const Index = () => {
         setClientType={setClientType}
         season={season}
         setSeason={setSeason}
+        vehicleType={vehicleType}
+        setVehicleType={setVehicleType}
         calculatedPrice={calculatedPrice}
-        baseRate={baseRate}
         scrollToSection={scrollToSection}
       />
       <ContactsAndFooter />
