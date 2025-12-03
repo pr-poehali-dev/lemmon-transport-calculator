@@ -104,7 +104,7 @@ const MainContent = ({
               Рассчитайте стоимость
             </h2>
             <p className="text-xl text-muted-foreground">
-              Аренда от 4 часов. Скидки для групп до 10%!
+              Минимум 4 часа + 2 часа подачи по Москве. Скидки до 10%!
             </p>
           </div>
 
@@ -128,12 +128,12 @@ const MainContent = ({
                   <Label className="text-lg font-semibold">Количество часов</Label>
                   <Input
                     type="number"
-                    min="2"
+                    min="4"
                     value={hours}
                     onChange={(e) => setHours(Number(e.target.value))}
                     className="text-lg h-12 border-2"
                   />
-                  <p className="text-sm text-muted-foreground">Минимум 2 часа (включая подачу)</p>
+                  <p className="text-sm text-muted-foreground">Минимум 4 часа + 2 часа подачи по Москве</p>
                 </div>
 
                 <div className="space-y-2">

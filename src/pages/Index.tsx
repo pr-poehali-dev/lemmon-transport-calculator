@@ -6,16 +6,17 @@ import ContactsAndFooter from '@/components/ContactsAndFooter';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
-  const [hours, setHours] = useState(2);
+  const [hours, setHours] = useState(4);
   const [clientType, setClientType] = useState('standard');
   const [season, setSeason] = useState('regular');
   const [vehicleType, setVehicleType] = useState('sprinter');
   const [calculatedPrice, setCalculatedPrice] = useState(0);
   
   const calculatePrice = () => {
-    const actualHours = Math.max(2, hours);
+    const actualHours = Math.max(4, hours);
+    const submitHours = actualHours + 2;
     const baseRate = vehicleType === 'bus' ? 3500 : 2500;
-    let price = actualHours * baseRate;
+    let price = submitHours * baseRate;
     
     if (clientType === 'corporate') price *= 0.85;
     if (clientType === 'subscription') price *= 0.75;

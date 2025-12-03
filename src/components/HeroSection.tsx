@@ -22,7 +22,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Премиум-комфорт на маршрутах по России. Автобусы VIP-класса (49-55 мест) с кондиционером, USB-зарядками и аудио/видео системами. Аренда от 4 часов.
+              Премиум-комфорт на маршрутах по России. Автобусы VIP-класса (49-55 мест) с кондиционером, USB-зарядками и аудио/видео системами. Минимум 4 часа + 2 часа подачи по Москве.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button 
